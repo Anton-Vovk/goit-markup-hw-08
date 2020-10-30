@@ -1,0 +1,89 @@
+.nav {
+  display: flex;
+  align-items: center;
+
+  &-list {
+    display: flex;
+
+    &-link {
+      font-family: $main-font;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 1.14;
+      letter-spacing: 0.02em;
+      color: $main-color;
+      transition: color 250ms $main-timing-function;
+    }
+  }
+
+  &-list-item {
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    &:not(:last-child) {
+      margin-right: 52px;
+    }
+  }
+
+  &-list-link:hover,
+  &-list-link:focus,
+  .active {
+    color: $accent-color;
+    position: relative;
+
+    & .nav-list-link::after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 4px;
+      background-color: $accent-color;
+      border-radius: 4px;
+      bottom: -33px;
+    }
+  }
+}
+
+.address-header {
+  margin-left: auto;
+
+  &-list {
+    display: flex;
+    align-items: center;
+
+    &-item:not(:last-child) {
+      margin-right: 30px;
+    }
+  }
+}
+
+.address-link-mail,
+.address-link-tel {
+  font-family: $main-font;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.142;
+  letter-spacing: 0.02em;
+  color: $description-color;
+  display: flex;
+  align-items: center;
+  transition: color 250ms $main-timing-function;
+
+  &:hover,
+  &:focus,
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
+}
+
+.letter-svg,
+.phone-svg {
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-portfolio {
+  border-bottom: 1px solid #ececec;
+}

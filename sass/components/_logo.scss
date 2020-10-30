@@ -1,0 +1,26 @@
+.logo {
+  font-family: $secondary-font;
+  font-weight: 700;
+  font-size: 26px;
+  line-height: 1.192;
+  letter-spacing: 0.03em;
+  color: #000000;
+  margin-right: 94px;
+  animation-duration: 2000ms;
+  animation-iteration-count: infinite;
+
+  &-footer {
+    font-family: $secondary-font;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 1.192;
+    letter-spacing: 0.03em;
+    color: $secondary-color;
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &-first-word {
+    color: $accent-color;
+  }
+}

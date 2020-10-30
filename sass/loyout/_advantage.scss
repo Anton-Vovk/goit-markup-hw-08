@@ -1,0 +1,60 @@
+.advantage {
+  padding-top: 94px;
+
+  &-title {
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.142;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: $main-color;
+    margin-bottom: 10px;
+  }
+
+  &-description {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.72;
+    letter-spacing: 0.03em;
+    color: $description-color;
+  }
+
+  &-list {
+    display: flex;
+  }
+
+  .advantage-list li {
+    flex-basis: 270px;
+    margin-right: 30px;
+
+    &:last-child {
+      margin-right: 0px;
+    }
+  }
+
+  .advantage-list-item {
+    &::before {
+      content: '';
+      display: block;
+      height: 120px;
+      margin-bottom: 30px;
+      background-color: #f5f4fa;
+      border-radius: 4px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &:nth-child(1)::before {
+      background-image: url(../images/advantage/antenna.svg);
+    }
+    &:nth-child(2)::before {
+      background-image: url(../images/advantage/clock.svg);
+    }
+    &:nth-child(3)::before {
+      background-image: url(../images/advantage/pc.svg);
+    }
+    &:nth-child(4)::before {
+      background-image: url(../images/advantage/astronaut.svg);
+    }
+  }
+}
