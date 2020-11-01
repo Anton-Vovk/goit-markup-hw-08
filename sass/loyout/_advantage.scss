@@ -1,5 +1,42 @@
 .advantage {
-  padding-top: 94px;
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 47px;
+  }
+
+  &-list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &-list-item {
+    @media screen and (min-width: 480px) {
+      width: 450px;
+    }
+    @media screen and (min-width: 768px) {
+      width: 354px;
+    }
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
+    &:nth-child(odd) {
+      @media screen and (min-width: 768px) {
+        margin-right: 30px;
+      }
+    }
+    &:not(:last-child) {
+      margin-bottom: 30px;
+      @media screen and (min-width: 1200px) {
+        margin-right: 30px;
+        margin-bottom: 0;
+      }
+    }
+  }
 
   &-title {
     font-weight: 700;
@@ -9,6 +46,10 @@
     text-transform: uppercase;
     color: $main-color;
     margin-bottom: 10px;
+
+    @media screen and (max-width: 767px) {
+      text-align: center;
+    }
   }
 
   &-description {
@@ -17,19 +58,6 @@
     line-height: 1.72;
     letter-spacing: 0.03em;
     color: $description-color;
-  }
-
-  &-list {
-    display: flex;
-  }
-
-  .advantage-list li {
-    flex-basis: 270px;
-    margin-right: 30px;
-
-    &:last-child {
-      margin-right: 0px;
-    }
   }
 
   .advantage-list-item {

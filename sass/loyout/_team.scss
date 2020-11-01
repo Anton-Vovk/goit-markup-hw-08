@@ -1,10 +1,21 @@
 .team {
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #f5f4fa;
-  padding-top: 94px;
-  padding-bottom: 94px;
+
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
 
   &-list {
     display: flex;
+    flex-direction: column;
+    margin: -15px;
+    @media screen and (min-width: 768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
   }
 
   &-list-item {
@@ -12,10 +23,7 @@
     box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
       0px 2px 1px rgba(0, 0, 0, 0.2);
     border-radius: 0px 0px 4px 4px;
-
-    &:not(:last-child) {
-      margin-right: 30px;
-    }
+    margin: 15px;
   }
 
   &-title {
@@ -25,11 +33,11 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $main-color;
-    margin-bottom: 50px;
-  }
-
-  &-list-img {
     margin-bottom: 30px;
+
+    @media screen and (min-width: 1200px) {
+      margin-bottom: 50px;
+    }
   }
 
   &-list-name {
@@ -39,7 +47,8 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $main-color;
-    margin-bottom: 10px;
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
 
   &-list-position {
@@ -49,6 +58,6 @@
     text-align: center;
     letter-spacing: 0.03em;
     color: $description-color;
-    margin-bottom: 16px;
+    padding-bottom: 16px;
   }
 }
