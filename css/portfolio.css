@@ -334,8 +334,37 @@ img {
   padding-bottom: 60px;
 }
 
-.footer-social-side {
-  margin-right: 93px;
+@media screen and (max-width: 1199px) {
+  .footer {
+    text-align: center;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .footer-address-social-wrap {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-address-social-wrap {
+    display: flex;
+    align-items: baseline;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .footer-social-side {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .footer-social-side {
+    margin-right: 93px;
+  }
 }
 
 .footer-social-side-title {
@@ -347,39 +376,6 @@ img {
   color: #ffffff;
   padding-bottom: 20px;
   padding-top: 12px;
-}
-
-.footer-list {
-  display: flex;
-}
-
-.footer-left-side {
-  margin-right: 70px;
-}
-
-.address-link-maps-foot,
-.address-link-mail-foot,
-.address-link-tel-foot {
-  font-style: normal;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
-  letter-spacing: 0.03em;
-  color: rgba(255, 255, 255, 0.6);
-}
-
-.address-link-maps-foot {
-  color: #ffffff;
-}
-
-.address-list-footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.address-list-footer li:not(:last-child) {
-  margin-bottom: 8px;
-  margin-right: 0px;
 }
 
 .footer-social-side .social-list-svg {
@@ -394,9 +390,34 @@ img {
   background: rgba(255, 255, 255, 0.1);
 }
 
-.form-subscribe {
-  display: flex;
-  justify-content: center;
+@media screen and (max-width: 767px) {
+  .address-container {
+    margin-bottom: 60px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .address-container {
+    margin-right: 165px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .address-container {
+    margin-right: 78px;
+    text-align: left;
+  }
+}
+
+.address-link-maps-foot,
+.address-link-mail-foot,
+.address-link-tel-foot {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.714;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .form-subscribe :placeholder-shown {
