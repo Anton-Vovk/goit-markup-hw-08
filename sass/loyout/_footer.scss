@@ -40,11 +40,16 @@
     padding-top: 12px;
   }
 }
+
 .address-list-item:not(:last-child) {
   margin-bottom: 8px;
 }
 
 .footer-social-side {
+  & .social-list {
+    padding-bottom: 0px;
+  }
+
   & .social-list-svg {
     fill: $secondary-color;
   }
@@ -55,6 +60,7 @@
 }
 .social-list-link {
   background: rgba(255, 255, 255, 0.1);
+  padding-bottom: 0;
 }
 
 .address-container {
@@ -139,11 +145,11 @@
     line-height: 1.87;
     letter-spacing: 0.06em;
     color: $secondary-color;
-
     background-color: $accent-color;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     border-radius: 4px;
     border-style: none;
+
     @media screen and (max-width: 1200px) {
       margin-left: auto;
       margin-right: auto;

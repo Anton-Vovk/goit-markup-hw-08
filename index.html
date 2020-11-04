@@ -17,52 +17,62 @@
   </head>
   <body>
     <!-- HEADER -->
-    <!-- <header class="header">
+    <header class="header">
       <div class="container container-header">
-        <nav class="nav">
+        <div class="logo-menu-wrapper">
           <a class="logo link animate__pulse" href="./index.html" lang="en"
-            ><span class="logo-first-word">Web</span>Studio</a
+              ><span class="logo-first-word">Web</span>Studio</a
           >
-          <ul class="nav-list list">
-            <li class="nav-list-item">
-              <div class="active">
-                <a class="nav-list-link link active" href="./index.html"
-                  >Студия</a
+          <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu-container" data-menu-button>
+            <svg class="menu-btn-svg" width="40px" height="40px" aria-label="mobile menu">
+                <use class="menu-btn-icon" href="./images/menu/menu.svg"></use>
+                <use class="menu-btn-close-icon" href="./images/menu/cross.svg"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="nav-address-wrapper" id="menu-container" data-menu>
+          <nav class="nav">
+            <ul class="nav-list list">
+              <li class="nav-list-item">
+                <div class="active">
+                  <a class="nav-list-link link active" href="./index.html"
+                      >Студия</a
+                  >
+                </div>
+              </li>
+              <li class="nav-list-item">
+                  <a class="nav-list-link link" href="./portfolio.html"
+                    >Портфолио</a
+                  >
+              </li>
+              <li class="nav-list-item">
+                <a class="nav-list-link link" href="">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+          <address class="address-header">
+            <ul class="address-header-list list">
+              <li class="address-header-list-item">
+                <a class="address-link-mail link" href="mailto:info@devstudio.com"
+                  ><svg class="letter-svg" width="16" height="12">
+                    <use href="./images/sprite.svg#letter"></use>
+                  </svg>
+                  info@devstudio.com</a
                 >
-              </div>
-            </li>
-            <li class="nav-list-item">
-              <a class="nav-list-link link" href="./portfolio.html"
-                >Портфолио</a
-              >
-            </li>
-            <li class="nav-list-item">
-              <a class="nav-list-link link" href="">Контакты</a>
-            </li>
-          </ul>
-        </nav>
-        <address class="address-header">
-          <ul class="address-header-list list">
-            <li class="address-header-list-item">
-              <a class="address-link-mail link" href="mailto:info@devstudio.com"
-                ><svg class="letter-svg" width="16" height="12">
-                  <use href="./images/sprite.svg#letter"></use>
-                </svg>
-                info@devstudio.com</a
-              >
-            </li>
-            <li class="address-header-list-item">
-              <a class="address-link-tel link" href="tel:+380961111111"
-                ><svg class="phone-svg" width="10" height="16">
-                  <use href="./images/sprite.svg#phone"></use>
-                </svg>
-                +38 096 111 11 11</a
-              >
-            </li>
-          </ul>
-        </address>
+              </li>
+              <li class="address-header-list-item">
+                <a class="address-link-tel link" href="tel:+380961111111"
+                  ><svg class="phone-svg" width="10" height="16">
+                    <use href="./images/sprite.svg#phone"></use>
+                  </svg>
+                  +38 096 111 11 11</a
+                >
+              </li>
+            </ul>
+          </address>
+        </div> 
       </div>
-    </header> -->
+    </header>
     <main>
       <!-- HERO -->
       <section class="hero">
@@ -415,7 +425,7 @@
             </div>
             <div class="footer-social-side">
               <h3 class="footer-social-side-title">присоединяйтесь</h3>
-              <ul class="social-list list">
+              <ul class="social-list social-list_footer list">
                 <li class="social-list-item">
                   <a class="social-list-link" href="">
                     <svg class="social-list-svg">
@@ -508,5 +518,6 @@
       </div>
     </div>
     <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

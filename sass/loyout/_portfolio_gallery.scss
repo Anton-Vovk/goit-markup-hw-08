@@ -1,45 +1,66 @@
-.portfolio-title {
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 2;
-  letter-spacing: 0.06em;
-  color: $main-color;
-}
-.portfolio-category {
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 1.875;
-  letter-spacing: 0.03em;
-  color: $description-color;
-}
-
 .portfolio-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  margin: -15px;
 
-  & li {
-    margin-right: 30px;
-    margin-bottom: 30px;
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
   }
 }
 
 .portfolio-item {
+  margin: 15px;
   transition: box-shadow 250ms $main-timing-function;
-
-  &:hover {
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
+  &:hover,
+  &:focus {
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
       1px 4px 6px rgba(0, 0, 0, 0.16);
   }
-
-  &:nth-child(3n) {
-    margin-right: 0px;
-  }
-
-  &:nth-child(n + 7) {
-    margin-bottom: 0px;
-  }
 }
 
+.portfolio-link {
+  display: inline-block;
+  .portfolio-img-wrapper {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .portfolio-title {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 2;
+    letter-spacing: 0.06em;
+    color: $main-color;
+  }
+  .portfolio-category {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.875;
+    letter-spacing: 0.03em;
+    color: $description-color;
+  }
+
+  @media screen and (min-width: 1200px) {
+    &:nth-child(3n) {
+      margin-right: 0px;
+    }
+
+    &:nth-child(n + 7) {
+      margin-bottom: 0px;
+    }
+  }
+}
 .potfolio-content {
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
@@ -73,5 +94,12 @@
   line-height: 1.556;
   letter-spacing: 0.03em;
   color: $secondary-color;
-  padding: 63px 24px;
+  padding: 77px 24px;
+
+  @media screen and (min-width: 768px) {
+    padding: 49px 24px;
+  }
+  @media screen and (min-width: 1200px) {
+    padding: 63px 24px;
+  }
 }

@@ -1,89 +1,258 @@
-.nav {
-  display: flex;
-  align-items: center;
+.header {
+  position: relative;
+  border-bottom: 1px solid #ececec;
 
-  &-list {
+  &.container {
+    @media screen and (min-width: 768px) {
+      justify-content: left;
+    }
+  }
+}
+.logo-menu-wrapper {
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 88px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 93px;
+  }
+}
+
+.menu-btn {
+  display: inline-flex;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  @media screen and (min-width: 768px) {
+    display: none;
+  }
+  &-close-icon {
+    display: none;
+    .menu-btn:hover &,
+    .menu-btn:focus & {
+      fill: $accent-color;
+    }
+    .menu-btn.is-open & {
+      display: block;
+    }
+  }
+  &-icon {
+    .menu-btn:hover &,
+    .menu-btn:focus & {
+      fill: $accent-color;
+    }
+    .menu-btn.is-open & {
+      display: none;
+    }
+  }
+}
+
+.nav-address-wrapper {
+  @media screen and (max-width: 767px) {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+    text-align: center;
+    background-color: $secondary-color;
+    &.is-open {
+      display: block;
+    }
+  }
+  @media screen and (min-width: 768px) {
     display: flex;
+    align-items: center;
+  }
+}
 
-    &-link {
-      font-family: $main-font;
+.nav {
+  @media screen and (max-width: 767px) {
+    padding-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-right: 84px;
+  }
+  @media screen and (min-width: 1200px) {
+    margin-right: 295px;
+  }
+  &-list {
+    @media screen and (min-width: 768px) {
+      display: flex;
+    }
+  }
+  &-list-link {
+    display: block;
+    color: $main-color;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.166;
+    letter-spacing: 0.02em;
+    transition: color 250ms $main-timing-function;
+
+    @media screen and (min-width: 768px) {
+      padding-top: 32px;
+      padding-bottom: 32px;
       font-weight: 500;
       font-size: 14px;
       line-height: 1.14;
-      letter-spacing: 0.02em;
-      color: $main-color;
-      transition: color 250ms $main-timing-function;
+    }
+    &:hover,
+    &:focus {
+      color: $accent-color;
     }
   }
-
-  &-list-item {
-    padding-top: 32px;
-    padding-bottom: 32px;
-
-    &:not(:last-child) {
-      margin-right: 52px;
+  &-list-item:not(:last-child) {
+    @media screen and (max-width: 767px) {
+      margin-bottom: 40px;
     }
-  }
-
-  &-list-link:hover,
-  &-list-link:focus,
-  .active {
-    color: $accent-color;
-    position: relative;
-
-    & .nav-list-link::after {
-      position: absolute;
-      content: '';
-      display: block;
-      width: 100%;
-      height: 4px;
-      background-color: $accent-color;
-      border-radius: 4px;
-      bottom: -33px;
+    @media screen and (min-width: 768px) {
+      margin-right: 50px;
     }
   }
 }
 
 .address-header {
-  margin-left: auto;
-
   &-list {
-    display: flex;
-    align-items: center;
-
-    &-item:not(:last-child) {
+    @media screen and (min-width: 1200px) {
+      display: flex;
+    }
+  }
+  &-list-item:not(:last-child) {
+    margin-bottom: 16px;
+    @media screen and (min-width: 768px) {
+      margin-bottom: 12px;
+    }
+    @media screen and (min-width: 1200px) {
       margin-right: 30px;
+      margin-bottom: 0;
     }
   }
 }
 
 .address-link-mail,
 .address-link-tel {
-  font-family: $main-font;
-  font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.142;
+  font-size: 18px;
+  line-height: 1.166;
   letter-spacing: 0.02em;
   color: $description-color;
+  transition: color 250ms $main-timing-function;
   display: flex;
   align-items: center;
-  transition: color 250ms $main-timing-function;
+  justify-content: center;
+  @media screen and (min-width: 768px) {
+    justify-content: start;
+    font-size: 12px;
+  }
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 1.142;
+  }
 
-  &:hover,
-  &:focus,
   &:hover,
   &:focus {
     color: $accent-color;
   }
 }
-
 .letter-svg,
 .phone-svg {
   margin-right: 10px;
   fill: currentColor;
 }
 
-.header-portfolio {
-  border-bottom: 1px solid #ececec;
-}
+// .nav {
+//   display: flex;
+//   align-items: center;
+
+//   &-list {
+//     display: flex;
+
+//     &-link {
+//       font-family: $main-font;
+//       font-weight: 500;
+//       font-size: 14px;
+//       line-height: 1.14;
+//       letter-spacing: 0.02em;
+//       color: $main-color;
+//       transition: color 250ms $main-timing-function;
+//     }
+//   }
+
+//   &-list-item {
+//     padding-top: 32px;
+//     padding-bottom: 32px;
+
+//     &:not(:last-child) {
+//       margin-right: 52px;
+//     }
+//   }
+
+//   &-list-link:hover,
+//   &-list-link:focus,
+//   .active {
+//     color: $accent-color;
+//     position: relative;
+
+//     & .nav-list-link::after {
+//       position: absolute;
+//       content: '';
+//       display: block;
+//       width: 100%;
+//       height: 4px;
+//       background-color: $accent-color;
+//       border-radius: 4px;
+//       bottom: -33px;
+//     }
+//   }
+// }
+
+// .address-header {
+//   margin-left: auto;
+
+//   &-list {
+//     display: flex;
+//     align-items: center;
+
+//     &-item:not(:last-child) {
+//       margin-right: 30px;
+//     }
+//   }
+// }
+
+// .address-link-mail,
+// .address-link-tel {
+//   font-family: $main-font;
+//   font-style: normal;
+//   font-weight: 500;
+//   font-size: 14px;
+//   line-height: 1.142;
+//   letter-spacing: 0.02em;
+//   color: $description-color;
+//   display: flex;
+//   align-items: center;
+//   transition: color 250ms $main-timing-function;
+
+//   &:hover,
+//   &:focus,
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }
+
+// .letter-svg,
+// .phone-svg {
+//   margin-right: 10px;
+//   fill: currentColor;
+// }
+
+// .header-portfolio {
+//   border-bottom: 1px solid #ececec;
+// }
