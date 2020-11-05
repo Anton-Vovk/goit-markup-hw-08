@@ -32,8 +32,6 @@ body {
 
 img {
   display: block;
-  max-width: 100%;
-  height: auto;
 }
 
 .container {
@@ -72,13 +70,20 @@ img {
 .logo {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: #000000;
-  margin-right: 94px;
   animation-duration: 2000ms;
   animation-iteration-count: infinite;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    margin-right: 280px;
+  }
 }
 
 .logo-footer {
@@ -341,18 +346,27 @@ img {
 }
 
 .header {
-  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 @media screen and (min-width: 768px) {
-  .header.container {
+  .header-container {
+    display: flex;
+    align-items: center;
     justify-content: left;
   }
 }
 
 @media screen and (max-width: 767px) {
   .logo-menu-wrapper {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 }
@@ -370,11 +384,12 @@ img {
 }
 
 .menu-btn {
-  display: inline-flex;
+  display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -444,7 +459,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .nav {
-    margin-right: 295px;
+    margin-right: 305px;
   }
 }
 
@@ -490,9 +505,10 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .address-header-list {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -513,8 +529,8 @@ img {
   }
 }
 
-.address-link-mail,
-.address-link-tel {
+.address-header-link {
+  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.166;
@@ -527,46 +543,115 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .address-link-mail,
-  .address-link-tel {
-    justify-content: start;
+  .address-header-link {
+    display: flex;
+    align-items: center;
     font-size: 12px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .address-link-mail,
-  .address-link-tel {
+  .address-header-link {
     font-size: 14px;
     line-height: 1.142;
   }
 }
 
-.address-link-mail:hover, .address-link-mail:focus,
-.address-link-tel:hover,
-.address-link-tel:focus {
+.address-header-link:hover, .address-header-link:focus {
   color: #2196f3;
 }
 
-.letter-svg,
+.letter-svg {
+  margin-right: 10px;
+  fill: currentColor;
+  width: 16px;
+  height: 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .letter-svg {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+}
+
 .phone-svg {
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .phone-svg {
+    margin-right: 8px;
+  }
+}
+
+.active {
+  position: relative;
+  color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .active {
+    padding-bottom: 12px;
+  }
+}
+
+.active::after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  bottom: 0;
+  display: inline-block;
+  width: 61px;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .active::after {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .active::after {
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .active_port.active::after {
+    width: 99px;
+  }
 }
 
 .header {
-  position: relative;
   border-bottom: 1px solid #ececec;
 }
 
+.header-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
 @media screen and (min-width: 768px) {
-  .header.container {
+  .header-container {
+    display: flex;
+    align-items: center;
     justify-content: left;
   }
 }
 
 @media screen and (max-width: 767px) {
   .logo-menu-wrapper {
+    display: flex;
+    align-items: center;
     justify-content: space-between;
   }
 }
@@ -584,11 +669,12 @@ img {
 }
 
 .menu-btn {
-  display: inline-flex;
+  display: inline-block;
   margin: 0;
   padding: 0;
   border: none;
   background-color: transparent;
+  outline: none;
 }
 
 @media screen and (min-width: 768px) {
@@ -658,7 +744,7 @@ img {
 
 @media screen and (min-width: 1200px) {
   .nav {
-    margin-right: 295px;
+    margin-right: 305px;
   }
 }
 
@@ -704,9 +790,10 @@ img {
   }
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 768px) {
   .address-header-list {
     display: flex;
+    flex-wrap: wrap;
   }
 }
 
@@ -727,8 +814,8 @@ img {
   }
 }
 
-.address-link-mail,
-.address-link-tel {
+.address-header-link {
+  font-style: normal;
   font-weight: 500;
   font-size: 18px;
   line-height: 1.166;
@@ -741,31 +828,91 @@ img {
 }
 
 @media screen and (min-width: 768px) {
-  .address-link-mail,
-  .address-link-tel {
-    justify-content: start;
+  .address-header-link {
+    display: flex;
+    align-items: center;
     font-size: 12px;
   }
 }
 
 @media screen and (min-width: 1200px) {
-  .address-link-mail,
-  .address-link-tel {
+  .address-header-link {
     font-size: 14px;
     line-height: 1.142;
   }
 }
 
-.address-link-mail:hover, .address-link-mail:focus,
-.address-link-tel:hover,
-.address-link-tel:focus {
+.address-header-link:hover, .address-header-link:focus {
   color: #2196f3;
 }
 
-.letter-svg,
+.letter-svg {
+  margin-right: 10px;
+  fill: currentColor;
+  width: 16px;
+  height: 12px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .letter-svg {
+    margin-right: 8px;
+    width: 14px;
+    height: 10px;
+  }
+}
+
 .phone-svg {
   margin-right: 10px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1199px) {
+  .phone-svg {
+    margin-right: 8px;
+  }
+}
+
+.active {
+  position: relative;
+  color: #2196f3;
+}
+
+@media screen and (max-width: 767px) {
+  .active {
+    padding-bottom: 12px;
+  }
+}
+
+.active::after {
+  position: absolute;
+  content: '';
+  left: 50%;
+  bottom: 0;
+  display: inline-block;
+  width: 61px;
+  height: 4px;
+  background-color: #2196f3;
+  border-radius: 2px;
+}
+
+@media screen and (max-width: 767px) {
+  .active::after {
+    transform: translateX(-50%);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .active::after {
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .active_port.active::after {
+    width: 99px;
+  }
 }
 
 .hero {

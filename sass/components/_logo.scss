@@ -1,14 +1,17 @@
 .logo {
   font-family: $secondary-font;
   font-weight: 700;
-  font-size: 26px;
-  line-height: 1.192;
+  font-size: 24px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: #000000;
-  margin-right: 94px;
   animation-duration: 2000ms;
   animation-iteration-count: infinite;
-
+  padding-top: 16px;
+  padding-bottom: 16px;
+  @media screen and (max-width: 767px) {
+    margin-right: 280px;
+  }
   &-footer {
     font-family: $secondary-font;
     font-weight: 700;
