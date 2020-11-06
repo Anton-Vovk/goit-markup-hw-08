@@ -13,6 +13,7 @@
 .portfolio-item {
   margin: 15px;
   transition: box-shadow 250ms $main-timing-function;
+
   @media screen and (min-width: 480px) {
     width: 450px;
   }
@@ -62,6 +63,7 @@
   }
 }
 .potfolio-content {
+  width: 100%;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-left: 1px solid #eeeeee;
@@ -79,6 +81,7 @@
   height: 100%;
   top: 0;
   left: 0;
+  overflow: auto;
   background: rgba(33, 150, 243, 0.9);
   transform: translateY(100%);
   transition: all 250ms $main-timing-function;
@@ -90,11 +93,16 @@
 
 .portfolio-description {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.556;
   letter-spacing: 0.03em;
   color: $secondary-color;
-  padding: 77px 24px;
+  padding: 20px 24px;
+
+  @media screen and (min-width: 480px) {
+    padding: 77px 24px;
+    font-size: 18px;
+  }
 
   @media screen and (min-width: 768px) {
     padding: 49px 24px;

@@ -16,30 +16,41 @@
 }
 
 .modal {
-  width: 528px;
-  height: 581px;
+  width: 300px;
+  height: 510px;
   transform: scale(1) perspective(400px) rotateX(0deg);
   transition: transform 250ms $main-timing-function;
   background-color: $secondary-color;
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 40px;
+  padding: 10px;
 
+  @media screen and (min-width: 480px) {
+    padding: 40px;
+    width: 450px;
+    height: 609px;
+  }
+  @media screen and (min-width: 1200) {
+    width: 528px;
+    height: 581px;
+  }
   &-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100%;
     padding: 15px;
-  }
+    @media screen and (max-width: 470px) {
+      width: 320px;
+    }
 
-  .backdrop.is-hidden & {
-    transform: scale(0.3) perspective(400px) rotateX(25deg);
-    transition: transform 250ms $main-timing-function;
+    .backdrop.is-hidden & {
+      transform: scale(0.3) perspective(400px) rotateX(25deg);
+      transition: transform 250ms $main-timing-function;
+    }
   }
 }
-
 .close-btn {
   position: absolute;
   top: 8px;
@@ -75,9 +86,9 @@
     color: $main-color;
     padding-bottom: 12px;
 
-    @media screen and (max-width: 1199px) {
-      width: 350px;
-      margin: 0 auto;
+    @media screen and (max-width: 479px) {
+      width: 235px;
+      margin: 0 right;
     }
   }
 
@@ -122,6 +133,9 @@
     font-size: 12px;
     line-height: 1.167;
     transition: border 250ms $main-timing-function;
+    @media screen and (max-width: 479px) {
+      height: 70px;
+    }
 
     &:placeholder-shown {
       font-weight: 400;
@@ -159,15 +173,15 @@
     line-height: 1.166;
     letter-spacing: 0.03em;
     color: $description-color;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     margin: 0 auto;
     display: flex;
-    align-items: center;
-    @media screen and (min-width: 1200px) {
-      font-size: 12px;
-      line-height: 1.714;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    @media screen and (min-width: 480px) {
+      align-items: center;
+      padding-bottom: 30px;
     }
-
     &::before {
       content: '';
       margin-right: 7px;
@@ -181,7 +195,6 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
-
     .modal-form-policy:checked + &::before {
       border: 1px solid $accent-color;
       background-color: $accent-color;
@@ -191,5 +204,6 @@
   .modal-form-policy-label a {
     text-decoration-line: underline;
     color: $accent-color;
+    margin: 0 auto;
   }
 }
