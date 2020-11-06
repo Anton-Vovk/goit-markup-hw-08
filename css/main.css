@@ -237,6 +237,13 @@ img {
   padding-bottom: 12px;
 }
 
+@media screen and (max-width: 1199px) {
+  .modal-form-title {
+    width: 350px;
+    margin: 0 auto;
+  }
+}
+
 .modal-form-field {
   margin-bottom: 10px;
   font-weight: 400;
@@ -311,14 +318,21 @@ img {
 
 .modal-form-policy-label {
   font-weight: 400;
-  font-size: 14px;
-  line-height: 1.714;
+  font-size: 12px;
+  line-height: 1.166;
   letter-spacing: 0.03em;
   color: #757575;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
   margin: 0 auto;
   display: flex;
   align-items: center;
+}
+
+@media screen and (min-width: 1200px) {
+  .modal-form-policy-label {
+    font-size: 12px;
+    line-height: 1.714;
+  }
 }
 
 .modal-form-policy-label::before {

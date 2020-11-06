@@ -74,6 +74,11 @@
     letter-spacing: 0.03em;
     color: $main-color;
     padding-bottom: 12px;
+
+    @media screen and (max-width: 1199px) {
+      width: 350px;
+      margin: 0 auto;
+    }
   }
 
   &-field {
@@ -150,14 +155,18 @@
 
   &-policy-label {
     font-weight: 400;
-    font-size: 14px;
-    line-height: 1.714;
+    font-size: 12px;
+    line-height: 1.166;
     letter-spacing: 0.03em;
     color: $description-color;
-    padding-bottom: 30px;
+    padding-bottom: 25px;
     margin: 0 auto;
     display: flex;
     align-items: center;
+    @media screen and (min-width: 1200px) {
+      font-size: 12px;
+      line-height: 1.714;
+    }
 
     &::before {
       content: '';
@@ -172,6 +181,7 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
+
     .modal-form-policy:checked + &::before {
       border: 1px solid $accent-color;
       background-color: $accent-color;
