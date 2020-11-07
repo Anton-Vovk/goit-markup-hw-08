@@ -72,16 +72,16 @@
       background-position: center;
     }
 
-    &:nth-child(1)::before {
-      background-image: url(../images/advantage/antenna.svg);
+    &_antena::before {
+      background-image: url(../images/advantage/antena.svg);
     }
-    &:nth-child(2)::before {
+    &_clock::before {
       background-image: url(../images/advantage/clock.svg);
     }
-    &:nth-child(3)::before {
+    &_pc::before {
       background-image: url(../images/advantage/pc.svg);
     }
-    &:nth-child(4)::before {
+    &_astronaut::before {
       background-image: url(../images/advantage/astronaut.svg);
     }
   }

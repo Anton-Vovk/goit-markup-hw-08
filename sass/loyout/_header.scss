@@ -6,14 +6,17 @@
     align-items: center;
     position: relative;
     @media screen and (min-width: 768px) {
-      @include align($jc: left);
+      justify-content: left;
     }
   }
 }
 
 .logo-menu-wrapper {
   @media screen and (max-width: 767px) {
-    @include align($jc: space-between);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
   }
   @media screen and (min-width: 768px) {
     margin-right: 88px;

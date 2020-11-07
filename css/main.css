@@ -82,12 +82,6 @@ img {
   padding-bottom: 16px;
 }
 
-@media screen and (max-width: 767px) {
-  .logo {
-    margin-right: 280px;
-  }
-}
-
 .logo-footer {
   font-family: "Raleway", sans-serif;
   font-weight: 700;
@@ -402,8 +396,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .header-container {
-    display: flex;
-    align-items: center;
     justify-content: left;
   }
 }
@@ -413,6 +405,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -687,8 +680,6 @@ img {
 
 @media screen and (min-width: 768px) {
   .header-container {
-    display: flex;
-    align-items: center;
     justify-content: left;
   }
 }
@@ -698,6 +689,7 @@ img {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    width: 100%;
   }
 }
 
@@ -1132,19 +1124,19 @@ img {
   background-position: center;
 }
 
-.advantage .advantage-list-item:nth-child(1)::before {
-  background-image: url(../images/advantage/antenna.svg);
+.advantage .advantage-list-item_antena::before {
+  background-image: url(../images/advantage/antena.svg);
 }
 
-.advantage .advantage-list-item:nth-child(2)::before {
+.advantage .advantage-list-item_clock::before {
   background-image: url(../images/advantage/clock.svg);
 }
 
-.advantage .advantage-list-item:nth-child(3)::before {
+.advantage .advantage-list-item_pc::before {
   background-image: url(../images/advantage/pc.svg);
 }
 
-.advantage .advantage-list-item:nth-child(4)::before {
+.advantage .advantage-list-item_astronaut::before {
   background-image: url(../images/advantage/astronaut.svg);
 }
 
