@@ -58,6 +58,7 @@
     background: $accent-color;
   }
 }
+
 .social-list-link {
   background: rgba(255, 255, 255, 0.1);
   padding-bottom: 0;
@@ -85,6 +86,10 @@
   line-height: 1.714;
   letter-spacing: 0.03em;
   color: rgba(255, 255, 255, 0.6);
+}
+
+.address-link-maps-foot {
+  color: $secondary-color;
 }
 
 .form-subscribe {

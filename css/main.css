@@ -1469,6 +1469,10 @@ img {
   color: rgba(255, 255, 255, 0.6);
 }
 
+.address-link-maps-foot {
+  color: #ffffff;
+}
+
 .form-subscribe-title {
   font-weight: 700;
   font-size: 14px;
